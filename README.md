@@ -16,6 +16,7 @@
 - `types.rs`: Contains the types used for describing car information.
 - `biluppgifter.rs`: Performs operations for fetching and processing Swedish car information. 🇸🇪
 - `ncts.rs`: Performs operations for fetching and processing Irish car information. 🇮🇪
+- `regnr.rs`: Performs operations for fetching and processing Norwegian car information. 🇳🇴
 - `main.rs`: The main program where everything runs.
 - `utils.rs`: Helper functions and utilities used throughout the project.
 
