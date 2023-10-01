@@ -63,14 +63,14 @@ fn main() {
         }
     }
 
-    // Output (kan också brytas ut till en egen funktion för att förbättra läsbarheten)
+    // Output
     match data {
         Ok(car_info) => print_car_info(car_info),
         Err(e) => println!("🛑 Error: {}", e),
     }
 }
 
-// Ny funktion för att skriva ut bilinformation
+// New function to print the car info
 fn print_car_info(car_info: CarInfo) {
     println!("🆔 PLATE:     {}", car_info.registration_number);
     println!("🏭 MAKE:      {}", car_info.make);
