@@ -10,6 +10,9 @@ lazy_static! {
     pub static ref IRELAND_PATTERN: Regex = Regex::new(r"^\d{2}-?[A-Z]{1,2}-?\d{1,4}$").unwrap(); // See: https://www.ncts.ie/
     pub static ref IRELAND_VETERAN_PATTERN: Regex = Regex::new(r"^ZV\d{4,6}$").unwrap(); // See: https://www.ncts.ie/
     pub static ref UK_PATTERN: Regex = Regex::new(r"^(?:[A-Z]{3}[0-9]{1,3})|(?:[A-Z]{1,2}[0-9]{1,4})|(?:[A-Z]{1,2}[0-9][A-Z])|(?:[A-Z]{1,3}[0-9]{1,3}[A-Z])$").unwrap();
+    // USA https://tagnap.com/plates/KUQG86-FL
+    // UK https://www.check-mot.service.gov.uk/
+    // NZ https://www.carjam.co.nz/car/?plate=GGD182&__cf_chl_tk=l5ikhfMnzE7AAndYkFbezyxgjojd1NygcOftwFZ.KvU-1696181861-0-gaNycGzNCns (HARD?)
 }
 
 // A helper function to extract text based on a selector
