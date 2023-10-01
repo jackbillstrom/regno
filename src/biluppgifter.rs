@@ -3,8 +3,6 @@
  * Responsible for fetching data from biluppgifter.se and returning it.
 */
 
-pub(crate) mod types;
-
 use scraper::{Html, Selector};
 
 use crate::types::{CarInfo, FuelType, Transmission};
