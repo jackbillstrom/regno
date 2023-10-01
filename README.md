@@ -52,7 +52,8 @@ regno
 Run the program with:
 
 ```bash
-cargo run
+cargo run -- ced267
+./regno ced267
 ```
 
 ## Contributing
