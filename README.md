@@ -3,6 +3,7 @@
 `regno` is an application for looking up vehicle registration numbers and car information.
 
 - 🇸🇪 Supports Swedish Plates
+- 🇳🇴 Supports Norwegian Plates
 - 🇮🇪 Supports Irish Plates
 - **Spanish, Finnish, and German plates coming soon!**
 
@@ -25,6 +26,8 @@ regno
 ├── src
 │ ├── biluppgifter.rs // Handles Swedish car information 🇸🇪
 │ ├── ncts.rs // Handles Irish car information 🇮🇪
+│ ├── types.rs // Types used for describing car information
+| ├── regnr.rs // Handles Norwegian car information 🇳🇴
 │ ├── main.rs // Main program
 │ └── utils.rs // Utility functions
 └── README.md
