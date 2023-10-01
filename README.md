@@ -1,10 +1,11 @@
-# regno
+# regno - Search for license plates instantly in your terminal
 
 `regno` is an application for looking up vehicle registration numbers and car information.
 
 - 🇸🇪 Supports Swedish Plates
+- 🇳🇴 Supports Norwegian Plates
 - 🇮🇪 Supports Irish Plates
-- **Spanish, Finnish, and German plates coming soon!**
+- **More countries to come!**
 
 ![A screenshot showing the application in use](screenshot.png)
 
@@ -12,9 +13,10 @@
 
 ## Features
 
-- `biluppgifter/types.rs`: Contains the types used for describing car information.
+- `types.rs`: Contains the types used for describing car information.
 - `biluppgifter.rs`: Performs operations for fetching and processing Swedish car information. 🇸🇪
 - `ncts.rs`: Performs operations for fetching and processing Irish car information. 🇮🇪
+- `regnr.rs`: Performs operations for fetching and processing Norwegian car information. 🇳🇴
 - `main.rs`: The main program where everything runs.
 - `utils.rs`: Helper functions and utilities used throughout the project.
 
@@ -25,6 +27,8 @@ regno
 ├── src
 │ ├── biluppgifter.rs // Handles Swedish car information 🇸🇪
 │ ├── ncts.rs // Handles Irish car information 🇮🇪
+│ ├── types.rs // Types used for describing car information
+| ├── regnr.rs // Handles Norwegian car information 🇳🇴
 │ ├── main.rs // Main program
 │ └── utils.rs // Utility functions
 └── README.md
