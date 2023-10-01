@@ -37,6 +37,7 @@ mod tests {
     fn test_determine_api() {
         assert_eq!(determine_api("ABC123"), Api::Biluppgifter);
         assert_eq!(determine_api("ZV275163"), Api::Ncts);
+        assert_eq!(determine_api("DP82347"), Api::Regnr);
         assert_eq!(determine_api("INVALID"), Api::Unsupported);
     }
 }
