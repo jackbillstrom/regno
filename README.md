@@ -6,7 +6,7 @@
 - 🇮🇪 Supports Irish Plates
 - **Spanish, Finnish, and German plates coming soon!**
 
-Hint: This project is still in development and was created as a learning experience for Rust.
+**Hint:** This project is still in development and was created as my learning experience for Rust. E.g it lacks moderate error-handling for now.
 
 ## Features
 
@@ -52,7 +52,8 @@ regno
 Run the program with:
 
 ```bash
-cargo run
+cargo run -- ced267
+./regno ced267
 ```
 
 ## Contributing
