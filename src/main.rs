@@ -65,23 +65,7 @@ fn main() {
 
     // Output
     match data {
-        Ok(car_info) => print_car_info(car_info),
+        Ok(car_info) => utils::print_car_info(car_info),
         Err(e) => println!("🛑 Error: {}", e),
     }
-}
-
-// New function to print the car info
-fn print_car_info(car_info: CarInfo) {
-    println!("🆔 PLATE:     {}", car_info.registration_number);
-    println!("🏭 MAKE:      {}", car_info.make);
-    println!("🔧 MODEL:     {}", car_info.model);
-    println!("📅 YEAR:      {}", car_info.year);
-    println!("⛽  FUEL:      {:?}", car_info.fuel_type);
-    println!("🔠 VIN:       {}", car_info.vin);
-    println!("🟢 STATUS:    {}", car_info.vehicle_status);
-    println!("⚙️  HP:       {}", if car_info.horsepower.is_empty() { "N/A" } else { &car_info.horsepower });
-    println!("👤 OWNER:     {}", car_info.owner);
-    println!("🚦 MSG:       {}", car_info.special_note.unwrap_or("N/A".to_string()));
-    println!("🌍 ECO:       {}", car_info.environmental_class.unwrap_or("N/A".to_string()));
-    println!("📆 NEXT INS:  {}", car_info.next_inspection_date.unwrap_or("N/A".to_string()));
 }
