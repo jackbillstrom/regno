@@ -2,8 +2,8 @@
 name = "regno"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "An application for looking up vehicle registration numbers and car information."
+license = "MIT"
 
 [dependencies]
 reqwest = "0.11.20"
@@ -11,3 +11,13 @@ scraper = "0.17.1"
 tokio = { version = "1.32.0", features = ["full"] }
 regex = "1.9.6"
 lazy_static = "1.4.0"
+
+# Debian package metadata
+[package.metadata.deb]
+name = "regno"
+maintainer = "jackbillstrom <jack@alkis.nu>"
+copyright = "2023, jackbillstrom"
+license-file = ["LICENSE", "4"]
+extended-description = "An application for looking up vehicle registration numbers and car information."
+depends = "$auto"
+revision = "1"

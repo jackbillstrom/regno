@@ -1,6 +1,7 @@
 use lazy_static::lazy_static;
 use regex::Regex;
 use scraper::Selector;
+use crate::types::CarInfo;
 
 
 lazy_static! {
@@ -20,4 +21,21 @@ pub fn extract_text(element: &scraper::ElementRef, selector: &str) -> String {
         .collect::<String>()
         .trim()
         .to_string()
+}
+
+
+// Helper function to print the car info
+pub(crate) fn print_car_info(car_info: CarInfo) {
+    println!("🆔 PLATE:     {}", car_info.registration_number);
+    println!("🏭 MAKE:      {}", car_info.make);
+    println!("🔧 MODEL:     {}", car_info.model);
+    println!("📅 YEAR:      {}", car_info.year);
+    println!("⛽  FUEL:      {:?}", car_info.fuel_type);
+    println!("🔠 VIN:       {}", car_info.vin);
+    println!("🟢 STATUS:    {}", car_info.vehicle_status);
+    println!("⚙️  HP:       {}", if car_info.horsepower.is_empty() { "N/A" } else { &car_info.horsepower });
+    println!("👤 OWNER:     {}", car_info.owner);
+    println!("🚦 MSG:       {}", car_info.special_note.unwrap_or("N/A".to_string()));
+    println!("🌍 ECO:       {}", car_info.environmental_class.unwrap_or("N/A".to_string()));
+    println!("📆 NEXT INS:  {}", car_info.next_inspection_date.unwrap_or("N/A".to_string()));
 }
