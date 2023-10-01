@@ -1,8 +1,10 @@
 mod biluppgifter;
+mod ncts;
 mod utils;
+mod types;
 
 use reqwest::Error;
-use biluppgifter::types::CarInfo;
+use crate::types::CarInfo;
 
 fn main() {
     // Get the command line arguments
@@ -22,8 +24,11 @@ fn main() {
         // Get data for Swedish license plates
         _ if utils::SWEDEN_PATTERN.is_match(&plate) => {
             println!("{} Found Swedish license plate", "\u{1F1F8}\u{1F1EA}");
-
             data = rt.block_on(biluppgifter::get(&plate));
+        },
+        _ if utils::IRELAND_PATTERN.is_match(&plate) || utils::IRELAND_VETERAN_PATTERN.is_match(&plate) => {
+            println!("{} Found Irish license plate", "\u{1F1EE}\u{1F1EA}");
+            data = rt.block_on(ncts::get(&plate));
         },
         // TODO: Add matches for more countries
         _ => {

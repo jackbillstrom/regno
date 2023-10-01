@@ -6,8 +6,8 @@
 pub(crate) mod types;
 
 use scraper::{Html, Selector};
-use types::CarInfo;
-use crate::biluppgifter::types::{FuelType, Transmission};
+
+use crate::types::{CarInfo, FuelType, Transmission};
 use crate::utils::extract_text;
 
 // get is an async function that returns a Result containing either a CarInfo struct or a reqwest::Error
@@ -30,31 +30,7 @@ pub async fn get(plate: &str) -> Result<CarInfo, reqwest::Error> {
     let vehicle_events_selector = Selector::parse("div#box-history section#history > div").unwrap();
 
     // Init CarInfo struct
-    let mut car_info = CarInfo {
-        owner: String::new(),
-        number_of_owners: 0,
-        annual_mileage: "".to_string(),
-        fuel_type: FuelType::Unknown,
-        transmission: Transmission::Unknown,
-        environmental_class: None,
-        first_registration_date: None,
-        horsepower: "".to_string(),
-        fuel_consumption: "".to_string(),
-        last_inspection_date: None,
-        next_inspection_date: None,
-        annual_tax: "".to_string(),
-        vehicle_status: "".to_string(),
-        special_note: None,
-        make: "".to_string(),
-        model: "".to_string(),
-        year: 0,
-        registration_number: "".to_string(),
-        history: vec![],
-        color: "".to_string(),
-        vin: "".to_string(),
-        chassi: "".to_string(),
-        stolen: "".to_string(),
-    };
+    let mut car_info = CarInfo::default();
 
     // Alert
     let alert_selector = Selector::parse(".alert.alert-danger.text-center").unwrap();
