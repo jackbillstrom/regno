@@ -1,4 +1,4 @@
-# regno
+# regno - Search for license plates instantly in your terminal
 
 `regno` is an application for looking up vehicle registration numbers and car information.
 
