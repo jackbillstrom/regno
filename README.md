@@ -6,7 +6,9 @@
 - 🇮🇪 Supports Irish Plates
 - **Spanish, Finnish, and German plates coming soon!**
 
-**Hint:** This project is still in development and was created as my learning experience for Rust. E.g it lacks moderate error-handling for now.
+![A screenshot showing the application in use](screenshot.png)
+
+**Hint:** This project is still in development and was created as my learning experience for Rust. E.g., it lacks moderate error-handling for now.
 
 ## Features
 
