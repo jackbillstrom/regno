@@ -2,8 +2,9 @@
 
 `regno` is an application for looking up vehicle registration numbers and car information.
 
-🇸🇪 Supports Swedish Plates
-🇮🇪 Supports Irish Plates
+- 🇸🇪 Supports Swedish Plates
+- 🇮🇪 Supports Irish Plates
+- **Spanish, Finnish, and German plates coming soon!**
 
 Hint: This project is still in development and was created as a learning experience for Rust.
 
