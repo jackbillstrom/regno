@@ -1,17 +1,29 @@
-# Regno
+# regno
 
-A project for handling vehicle registration numbers and car information.
+`regno` is an application for looking up vehicle registration numbers and car information.
+
+🇸🇪 Supports Swedish Plates
+🇮🇪 Supports Irish Plates
+
+Hint: This project is still in development and was created as a learning experience for Rust.
+
+## Features
+
+- `biluppgifter/types.rs`: Contains the types used for describing car information.
+- `biluppgifter.rs`: Performs operations for fetching and processing Swedish car information. 🇸🇪
+- `ncts.rs`: Performs operations for fetching and processing Irish car information. 🇮🇪
+- `main.rs`: The main program where everything runs.
+- `utils.rs`: Helper functions and utilities used throughout the project.
 
 ## Project Structure
 
 ```
 regno
 ├── src
-│   ├── biluppgifter
-│   │   └── types.rs  // Types for car information
-│   ├── biluppgifter.rs // Handles car information
-│   ├── main.rs // Main program
-│   └── utils.rs // Utility functions
+│ ├── biluppgifter.rs // Handles Swedish car information 🇸🇪
+│ ├── ncts.rs // Handles Irish car information 🇮🇪
+│ ├── main.rs // Main program
+│ └── utils.rs // Utility functions
 └── README.md
 ```
 
@@ -24,7 +36,7 @@ regno
 1. Clone this repository:
 
     ```
-    git clone https://github.com/your-username/regno.git
+    git clone https://github.com/jackbillstrom/regno.git
     ```
 
 2. Build the project:
@@ -41,13 +53,6 @@ Run the program with:
 ```bash
 cargo run
 ```
-
-## Features
-
-- `biluppgifter/types.rs`: Contains the types used for describing car information.
-- `biluppgifter.rs`: Performs operations for fetching and processing car information.
-- `main.rs`: The main program where everything runs.
-- `utils.rs`: Helper functions and utilities used throughout the project.
 
 ## Contributing
 
