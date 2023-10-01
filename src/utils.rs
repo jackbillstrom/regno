@@ -3,7 +3,6 @@ use regex::Regex;
 use scraper::Selector;
 
 
-#[macro_use]
 lazy_static! {
     pub static ref SWEDEN_PATTERN: Regex = Regex::new(r"^[A-Z]{3}[0-9]{2}[A-Z0-9]$").unwrap();
     pub static ref NORWAY_PATTERN: Regex = Regex::new(r"^[A-Z]{2}[0-9]{5}$").unwrap(); // See: https://www.vegvesen.no/kjoretoy/kjop-og-salg/kjoretoyopplysninger/sjekk-kjoretoyopplysninger/?registreringsnummer=DN47282
