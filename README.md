@@ -5,7 +5,7 @@
 - 🇸🇪 Supports Swedish Plates
 - 🇳🇴 Supports Norwegian Plates
 - 🇮🇪 Supports Irish Plates
-- **Spanish, Finnish, and German plates coming soon!**
+- **More countries to come!**
 
 ![A screenshot showing the application in use](screenshot.png)
 
