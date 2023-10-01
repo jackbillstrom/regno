@@ -37,6 +37,8 @@ pub struct CarInfo {
     pub(crate) next_inspection_date: Option<String>, // Next inspection date of the car
     pub(crate) annual_tax: String, // Annual tax of the car
     pub(crate) vehicle_status: String, // Vehicle status of the car
+    pub(crate) estimated_dealer_price: Option<String>, // Estimated car price from a dealer
+    pub(crate) estimated_private_price: Option<String>, // Estimated car price from a private seller
     pub(crate) chassi: String,  // Chassi of the car
     pub(crate) history: Vec<String>, // History of the car
     pub(crate) color: String, // Color of the car
@@ -65,6 +67,8 @@ impl Default for CarInfo {
             next_inspection_date: None,
             annual_tax: String::new(),
             vehicle_status: String::new(),
+            estimated_dealer_price: None,
+            estimated_private_price: None,
             chassi: String::new(),
             history: Vec::new(),
             color: String::new(),

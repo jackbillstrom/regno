@@ -2,6 +2,7 @@ mod biluppgifter;
 mod ncts;
 mod utils;
 mod types;
+mod regnr;
 
 use reqwest::Error;
 use crate::types::CarInfo;
@@ -10,6 +11,7 @@ use crate::types::CarInfo;
 pub enum Api {
     Biluppgifter,
     Ncts,
+    Regnr,
     Unsupported,
 }
 
@@ -19,7 +21,10 @@ pub fn determine_api(plate: &str) -> Api {
         Api::Biluppgifter
     } else if utils::IRELAND_PATTERN.is_match(plate) || utils::IRELAND_VETERAN_PATTERN.is_match(plate) {
         Api::Ncts
-    } else {
+    } else if utils::NORWAY_PATTERN.is_match(plate) {
+        Api::Regnr
+    }
+    else {
         Api::Unsupported
     }
 }
@@ -57,6 +62,10 @@ fn main() {
             println!("{} Found Irish license plate", "\u{1F1EE}\u{1F1EA}");
             data = rt.block_on(ncts::get(&plate));
         },
+        Api::Regnr => {
+            println!("{} Found Norwegian license plate", "\u{1F1F3}\u{1F1F4}");
+            data = rt.block_on(regnr::get(&plate));
+        }
         Api::Unsupported => {
             println!("🛑 Error: Unsupported / Invalid license plate");
             std::process::exit(1);
